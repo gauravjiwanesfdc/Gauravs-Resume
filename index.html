@@ -7,7 +7,35 @@
     <title>Resume UI</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+        @media print {
+            body {
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+        
+            .work-experience {
+                page-break-inside: avoid;
+            }
+        
+            .contact,
+            .skills,
+            .work-experience {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        
+            .work-experience > div {
+                width: 48%;
+                margin-right: 2%;
+            }
+        }
+        
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
