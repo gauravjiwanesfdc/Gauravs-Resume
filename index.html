@@ -4,202 +4,334 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaurav Jiwane - Resume</title>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      background: #fff;
       color: #222;
+      line-height: 1.6;
     }
     .container {
-      max-width: 1100px;
-      margin: 30px auto;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 30px;
-      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 40px;
     }
-    h1 {
-      font-size: 28px;
+    /* Header */
+    .header {
+      text-align: center;
+      border-bottom: 3px solid #002060;
+      padding-bottom: 15px;
+    }
+    .header h1 {
       margin: 0;
+      font-size: 30px;
       font-weight: 700;
     }
+    .header h3 {
+      color: #0070c0;
+      margin: 5px 0 15px;
+      font-weight: 500;
+    }
+    .contact {
+      font-size: 14px;
+    }
+    .contact i {
+      color: #0070c0;
+      margin: 0 5px;
+    }
+    .contact a {
+      color: #0070c0;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    /* Section Headings */
     h2 {
       font-size: 18px;
       margin-top: 25px;
       margin-bottom: 10px;
-      border-bottom: 2px solid #444;
-      padding-bottom: 4px;
+      border-bottom: 2px solid #002060;
+      padding-bottom: 5px;
+      text-transform: uppercase;
     }
-    h3 {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 4px;
+
+    /* Career Milestones */
+    .milestone {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
     }
-    p, li {
-      font-size: 14px;
-      line-height: 1.5;
+    .milestone i {
+      color: #0070c0;
+      margin-right: 10px;
+      font-size: 16px;
+      margin-top: 4px;
     }
-    .header {
-      grid-column: span 2;
-      text-align: center;
-      margin-bottom: 20px;
+    .milestone b {
+      display: block;
     }
-    .header h3 {
-      font-weight: 500;
-      color: #555;
+
+    /* Strengths Grid */
+    .strengths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
     }
-    .contact {
-      font-size: 14px;
-      margin-top: 5px;
+    .strength {
+      display: flex;
+      align-items: flex-start;
     }
-    .contact a {
-      color: #0066cc;
-      text-decoration: none;
+    .strength i {
+      color: #0070c0;
+      margin-right: 8px;
+      margin-top: 4px;
     }
-    .left-col {
-      border-right: 2px solid #eee;
-      padding-right: 20px;
+    .strength b {
+      display: block;
     }
-    .right-col {
-      padding-left: 20px;
+
+    /* Skills as Tags */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    ul.squares {
-      list-style-type: square;
-      margin-left: 20px;
+    .skill {
+      border: 1px solid #444;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 13px;
     }
+
+    /* Job Experience */
     .job {
       margin-bottom: 20px;
     }
-    .job .company {
-      font-weight: 600;
+    .job-title {
+      font-weight: 700;
       font-size: 15px;
     }
-    .job .date {
+    .job-company {
+      color: #0070c0;
+      font-weight: 500;
+    }
+    .job-meta {
       font-size: 13px;
-      color: #666;
-      margin-bottom: 6px;
+      color: #555;
+      margin-bottom: 8px;
     }
     .project {
-      margin-left: 15px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .project h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .project ul {
+      margin: 0 0 5px 20px;
+    }
+    .project p {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* Education */
+    .edu-item {
+      margin-bottom: 12px;
+    }
+    .edu-item b {
+      display: block;
+    }
+    .edu-meta {
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* Languages */
+    .languages {
+      display: flex;
+      gap: 40px;
+    }
+    .lang {
+      font-size: 14px;
+    }
+    .dots {
+      color: #0070c0;
+      margin-left: 8px;
+    }
+    .dots .fa-circle {
+      font-size: 10px;
+      margin: 0 1px;
+    }
+    .dots .fa-circle.gray {
+      color: #ccc;
+    }
+
+    /* Declaration */
+    .declaration {
+      display: flex;
+      align-items: flex-start;
+    }
+    .declaration i {
+      color: #0070c0;
+      margin-right: 10px;
+      margin-top: 3px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    
     <!-- Header -->
     <div class="header">
       <h1>Gaurav Jiwane</h1>
-      <h3>Software Engineer | Salesforce Developer</h3>
+      <h3>Software Engineer Salesforce</h3>
       <div class="contact">
-        📞 9175441578 | ✉️ <a href="mailto:gaurav.jiwanesfdc@gmail.com">gaurav.jiwanesfdc@gmail.com</a> | 
-        🔗 <a href="https://linkedin.com/in/gaurav-jiwane-6810871a0" target="_blank">LinkedIn</a>
+        <i class="fa-solid fa-phone"></i> 9175441578
+        <i class="fa-solid fa-envelope"></i> <a href="mailto:gaurav.jiwanesfdc@gmail.com">gaurav.jiwanesfdc@gmail.com</a>
+        <i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/gaurav-jiwane-6810871a0" target="_blank">LinkedIn</a>
       </div>
     </div>
 
-    <!-- Left Column -->
-    <div class="left-col">
-      <h2>Certification</h2>
-      <p>Salesforce Certified Platform Developer</p>
-      <p>Salesforce Certified Administrator</p>
-      <p>Salesforce Associate</p>
+    <!-- Professional Summary -->
+    <h2>Professional Summary</h2>
+    <p>Results-driven Salesforce Developer with 2 years 10 months out of which 2 years are in Salesforce experience & 10 months in Zoho CRM and Zoho creator. Proficient in Apex, Lightning Web Components (LWC), and Flow Builder, with a proven track record of automating business processes and enhancing user experiences.</p>
 
-      <h2>Skills</h2>
-      <ul class="squares">
-        <li>Salesforce Apex</li>
-        <li>Lightning Web Components</li>
-        <li>Flow Builder</li>
-        <li>SOQL, SOSL</li>
-        <li>CRM Customization</li>
-        <li>Apex Triggers</li>
-        <li>Zoho CRM & Deluge Scripting</li>
-        <li>APIs Integration</li>
-        <li>Reports & Dashboards</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Jira, Debugging, CPQ</li>
-      </ul>
+    <!-- Career Objective -->
+    <h2>Career Objective</h2>
+    <p>To leverage over 2.5 years of experience as a Salesforce Developer to design and implement innovative CRM solutions, utilizing expertise in Apex, Lightning Web Components, and Flow Builder to drive business efficiency and user satisfaction.</p>
 
-      <h2>Strengths</h2>
-      <ul class="squares">
-        <li>Technical Proficiency</li>
-        <li>Process Optimization</li>
-        <li>Collaboration</li>
-        <li>Problem-Solving</li>
-        <li>Adaptability</li>
-      </ul>
+    <!-- Career Milestones -->
+    <h2>Career Milestones</h2>
+    <div class="milestone"><i class="fa-solid fa-users"></i><div><b>User Engagement</b>Improved user engagement by 10% with dynamic LWC components in Salesforce projects.</div></div>
+    <div class="milestone"><i class="fa-solid fa-bug-slash"></i><div><b>Defect Reduction</b>Achieved 95% defect-free deployments by collaborating with QA teams.</div></div>
+    <div class="milestone"><i class="fa-solid fa-bullseye"></i><div><b>Campaign Efficiency</b>Boosted campaign conversion rates through Zoho CRM customizations.</div></div>
 
-      <h2>Languages</h2>
-      <p>English – Advanced</p>
-      <p>Hindi – Advanced</p>
-      <p>Marathi – Advanced</p>
+    <!-- Strengths -->
+    <h2>Strengths</h2>
+    <div class="strengths">
+      <div class="strength"><i class="fa-solid fa-gem"></i><div><b>Technical Proficiency</b>Expert in Salesforce Apex, Lightning Web Components, and Flow Builder.</div></div>
+      <div class="strength"><i class="fa-solid fa-gears"></i><div><b>Process Optimization</b>Proven ability to streamline business processes with automation.</div></div>
+      <div class="strength"><i class="fa-solid fa-handshake"></i><div><b>Collaboration</b>Skilled at working with cross-functional teams and stakeholders.</div></div>
+      <div class="strength"><i class="fa-solid fa-lightbulb"></i><div><b>Problem-Solving</b>Adept at debugging and resolving complex issues.</div></div>
+      <div class="strength"><i class="fa-solid fa-arrows-rotate"></i><div><b>Adaptability</b>Versatile in Salesforce & Zoho platforms, integrating APIs.</div></div>
     </div>
 
-    <!-- Right Column -->
-    <div class="right-col">
-      <h2>Professional Summary</h2>
-      <p>Results-driven Salesforce Developer with 2 years 10 months (2 years Salesforce + 10 months Zoho CRM). Skilled in Apex, Lightning Web Components (LWC), and Flow Builder, with a proven record of delivering scalable solutions.</p>
+    <!-- Certification -->
+    <h2>Certification</h2>
+    <p><a href="#">Salesforce Certified Platform Developer</a> | <a href="#">Salesforce Certified Administrator</a> | <a href="#">Salesforce Associate</a></p>
 
-      <h2>Career Objective</h2>
-      <p>To leverage 2.5 years of experience as a Salesforce Developer to design innovative CRM solutions, enhancing efficiency and user satisfaction.</p>
+    <!-- Skills -->
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Salesforce Apex</div>
+      <div class="skill">Lightning Web Components</div>
+      <div class="skill">Flow Builder</div>
+      <div class="skill">SOQL</div>
+      <div class="skill">SOSL</div>
+      <div class="skill">Salesforce Administration</div>
+      <div class="skill">CRM Customization</div>
+      <div class="skill">Apex Triggers</div>
+      <div class="skill">Zoho CRM</div>
+      <div class="skill">Deluge Scripting</div>
+      <div class="skill">Zoho APIs</div>
+      <div class="skill">Reports & Dashboards</div>
+      <div class="skill">Process Automation</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Jira</div>
+      <div class="skill">Stakeholder Collaboration</div>
+      <div class="skill">Debugging</div>
+      <div class="skill">CPQ</div>
+    </div>
 
-      <h2>Career Milestones</h2>
-      <ul>
-        <li>User Engagement: Improved user engagement by 10% using LWCs.</li>
-        <li>Defect Reduction: Achieved 95% defect-free deployments.</li>
-        <li>Campaign Efficiency: Boosted conversion rates with Zoho customizations.</li>
-      </ul>
+    <!-- Professional Experience -->
+    <h2>Professional Experience</h2>
+    <div class="job">
+      <div class="job-title">Salesforce Developer</div>
+      <div class="job-company">Marketing Technology Solution Pvt. Ltd</div>
+      <div class="job-meta"><i class="fa-solid fa-calendar"></i> 09/2022 – 06/2025 | <i class="fa-solid fa-location-dot"></i> Jaipur</div>
 
-      <h2>Professional Experience</h2>
-      <div class="job">
-        <div class="company">Salesforce Developer – Marketing Technology Solution Pvt. Ltd</div>
-        <div class="date">09/2022 – 06/2025 | Jaipur</div>
-        <div class="project">
-          <h3>Vrudhi – Agriculture CRM (Salesforce)</h3>
-          <ul>
-            <li>Developed & optimized Apex triggers and classes.</li>
-            <li>Designed dynamic LWCs to enhance UI.</li>
-            <li>Configured Flow Builder for automation & notifications.</li>
-            <li>Collaborated with QA for 95% defect-free deployments.</li>
-          </ul>
-        </div>
-        <div class="project">
-          <h3>Client Portal UX Fix – Salesforce Experience Cloud</h3>
-          <ul>
-            <li>Enhanced portal responsiveness with mobile-first LWC design.</li>
-            <li>Resolved layout inconsistencies, improving user satisfaction by 15%.</li>
-            <li>Implemented UX feedback, reducing issues by 25%.</li>
-          </ul>
-        </div>
-        <div class="project">
-          <h3>Zoho CRM Implementation</h3>
-          <ul>
-            <li>Built custom UI with Zoho Widgets & Deluge scripting.</li>
-            <li>Developed lead generation & campaign management features.</li>
-            <li>Created custom dashboards for stakeholders.</li>
-            <li>Integrated Zoho APIs to reduce manual data entry.</li>
-          </ul>
-        </div>
+      <div class="project">
+        <h3>Vrudhi – Agriculture CRM (Salesforce)</h3>
+        <ul>
+          <li>Developed and optimized Apex triggers and classes.</li>
+          <li>Designed dynamic LWCs to enhance UI.</li>
+          <li>Configured Flow Builder for business automation.</li>
+          <li>Wrote scalable Apex code adhering to governor limits.</li>
+          <li>Collaborated with QA teams for defect-free deployments.</li>
+          <li>Partnered with stakeholders for feature rollout.</li>
+        </ul>
+        <p><b>Technologies:</b> Apex, LWC, Flow Builder, SOQL, Salesforce Platform</p>
       </div>
 
-      <h2>Education</h2>
-      <ul>
-        <li><b>Bachelor of Engineering (Civil)</b> – Bapurao Deshmukh College of Engineering (2016 – 2020)</li>
-        <li><b>HSC</b> – Anand Niketan College, Warora (2013 – 2015)</li>
-        <li><b>SSC</b> – Hiralay Loya Vidyalaya, Warora (2012 – 2013)</li>
-      </ul>
+      <div class="project">
+        <h3>Client Portal UX Fix – Salesforce Experience Cloud</h3>
+        <ul>
+          <li>Enhanced portal responsiveness with mobile-first LWCs.</li>
+          <li>Resolved layout inconsistencies for consistent branding.</li>
+          <li>Collaborated with UX designers, reducing issues by 25%.</li>
+        </ul>
+        <p><b>Technologies:</b> LWC, Salesforce Experience Cloud, HTML, CSS</p>
+      </div>
 
-      <h2>Find Me Online</h2>
-      <p><a href="https://linkedin.com/in/gaurav-jiwane-6810871a0" target="_blank">LinkedIn</a> | 
-         <a href="https://trailblazer.me/gjiwane2" target="_blank">Salesforce Trailblazer</a></p>
+      <div class="project">
+        <h3>Zoho CRM Implementation</h3>
+        <ul>
+          <li>Built custom UI with Zoho Widgets & Deluge Scripting.</li>
+          <li>Implemented lead generation & campaign features.</li>
+          <li>Created dashboards for stakeholders.</li>
+          <li>Integrated Zoho APIs to reduce manual entry.</li>
+        </ul>
+        <p><b>Technologies:</b> Zoho CRM, Zoho Widgets, Deluge Scripting, Zoho APIs, HTML, CSS, JavaScript</p>
+      </div>
+    </div>
 
-      <h2>Declaration</h2>
-      <p>I hereby declare that all the information provided is true and accurate to the best of my knowledge.</p>
+    <!-- Education -->
+    <h2>Education</h2>
+    <div class="edu-item">
+      <b>Bachelor of Engineering</b> – <span class="job-company">Bapurao Deshmukh College of Engineering</span>
+      <div class="edu-meta"><i class="fa-solid fa-calendar"></i> 2016 – 2020 | (Civil Engineering)</div>
+    </div>
+    <div class="edu-item">
+      <b>Higher Secondary Certificate (HSC)</b> – <span class="job-company">Anand Niketan College</span>
+      <div class="edu-meta"><i class="fa-solid fa-calendar"></i> 2013 – 2015 | Anandwan, Warora</div>
+    </div>
+    <div class="edu-item">
+      <b>Secondary School Certificate (SSC)</b> – <span class="job-company">Hiralay Loya Vidyalaya</span>
+      <div class="edu-meta"><i class="fa-solid fa-calendar"></i> 2012 – 2013 | Warora</div>
+    </div>
+
+    <!-- Languages -->
+    <h2>Languages</h2>
+    <div class="languages">
+      <div class="lang">English – Advanced
+        <span class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle gray"></i><i class="fa-solid fa-circle gray"></i></span>
+      </div>
+      <div class="lang">Hindi – Advanced
+        <span class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle gray"></i><i class="fa-solid fa-circle gray"></i></span>
+      </div>
+      <div class="lang">Marathi – Advanced
+        <span class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle gray"></i><i class="fa-solid fa-circle gray"></i></span>
+      </div>
+    </div>
+
+    <!-- Find Me Online -->
+    <h2>Find Me Online</h2>
+    <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/gaurav-jiwane-6810871a0" target="_blank">LinkedIn</a> | 
+       <i class="fa-solid fa-globe"></i> <a href="https://trailblazer.me/gjiwane2" target="_blank">Trailblazer</a></p>
+
+    <!-- Declaration -->
+    <h2>Declaration</h2>
+    <div class="declaration">
+      <i class="fa-solid fa-pen"></i>
+      <p>I hereby declare that all the information provided in this resume is true and accurate to the best of my knowledge.</p>
     </div>
   </div>
 </body>
