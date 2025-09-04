@@ -183,6 +183,18 @@
       margin-right: 10px;
       margin-top: 3px;
     }
+/* Prevent sections from splitting across pages when printing */
+@media print {
+  h2, .strengths, .strength, .skills, .job, .project, .edu-item, .languages, .declaration {
+    page-break-inside: avoid;
+  }
+  .container {
+    box-shadow: none; /* remove shadow for print */
+    margin: 0;
+    padding: 20px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -213,14 +225,31 @@
     <div class="milestone"><i class="fa-solid fa-bullseye"></i><div><b>Campaign Efficiency</b>Boosted campaign conversion rates through Zoho CRM customizations.</div></div>
 
     <!-- Strengths -->
-    <h2>Strengths</h2>
-    <div class="strengths">
-      <div class="strength"><i class="fa-solid fa-gem"></i><div><b>Technical Proficiency</b>Expert in Salesforce Apex, Lightning Web Components, and Flow Builder.</div></div>
-      <div class="strength"><i class="fa-solid fa-gears"></i><div><b>Process Optimization</b>Proven ability to streamline business processes with automation.</div></div>
-      <div class="strength"><i class="fa-solid fa-handshake"></i><div><b>Collaboration</b>Skilled at working with cross-functional teams and stakeholders.</div></div>
-      <div class="strength"><i class="fa-solid fa-lightbulb"></i><div><b>Problem-Solving</b>Adept at debugging and resolving complex issues.</div></div>
-      <div class="strength"><i class="fa-solid fa-arrows-rotate"></i><div><b>Adaptability</b>Versatile in Salesforce & Zoho platforms, integrating APIs.</div></div>
-    </div>
+   <!-- Strengths -->
+<h2>Strengths</h2>
+<div class="strengths">
+  <div class="strength">
+    <i class="fa-solid fa-gem"></i>
+    <div><b>Technical Proficiency</b> Expert in Salesforce Apex, Lightning Web Components, and Flow Builder.</div>
+  </div>
+  <div class="strength">
+    <i class="fa-solid fa-gears"></i>
+    <div><b>Process Optimization</b> Proven ability to streamline business processes with automation.</div>
+  </div>
+  <div class="strength">
+    <i class="fa-solid fa-handshake"></i>
+    <div><b>Collaboration</b> Skilled at working with cross-functional teams and stakeholders.</div>
+  </div>
+  <div class="strength">
+    <i class="fa-solid fa-lightbulb"></i>
+    <div><b>Problem-Solving</b> Adept at debugging and resolving complex issues.</div>
+  </div>
+  <div class="strength">
+    <i class="fa-solid fa-arrows-rotate"></i>
+    <div><b>Adaptability</b> Versatile in Salesforce & Zoho platforms, integrating APIs.</div>
+  </div>
+</div>
+
 
     <!-- Certification -->
 <h2>Certification</h2>
