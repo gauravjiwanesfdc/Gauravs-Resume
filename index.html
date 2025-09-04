@@ -185,14 +185,26 @@
     }
 /* Prevent sections from splitting across pages when printing */
 @media print {
-  h2, .strengths, .strength, .skills, .job, .project, .edu-item, .languages, .declaration {
+  /* Keep whole sections (heading + content) together */
+  .section {
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+
+  /* Additional elements that should never break individually */
+  .strengths, .skills, .job, .project, .edu-item, .languages, .declaration {
     page-break-inside: avoid;
   }
+
+  /* Clean print layout */
   .container {
-    box-shadow: none; /* remove shadow for print */
+    box-shadow: none; /* remove shadow */
     margin: 0;
     padding: 20px;
   }
+}
+
 }
 
   </style>
@@ -225,7 +237,7 @@
     <div class="milestone"><i class="fa-solid fa-bullseye"></i><div><b>Campaign Efficiency</b>Boosted campaign conversion rates through Zoho CRM customizations.</div></div>
 
     <!-- Strengths -->
-   <!-- Strengths -->
+ <div class="section">
 <h2>Strengths</h2>
 <div class="strengths">
   <div class="strength">
@@ -249,6 +261,7 @@
     <div><b>Adaptability</b> Versatile in Salesforce & Zoho platforms, integrating APIs.</div>
   </div>
 </div>
+ </div>
 
 
     <!-- Certification -->
@@ -282,6 +295,7 @@
     </div>
 
     <!-- Professional Experience -->
+<div class="section">
     <h2>Professional Experience</h2>
     <div class="job">
       <div class="job-title">Salesforce Developer</div>
@@ -323,6 +337,7 @@
   <p><b>Technologies:</b> Zoho CRM, Zoho Widgets, Deluge Scripting, Zoho APIs, HTML, CSS, JavaScript</p>
 </div>
 
+    </div>
     </div>
 
     <!-- Education -->
